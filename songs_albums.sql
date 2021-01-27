@@ -43,10 +43,11 @@ SELECT '';
 SELECT Songs.name, Albums.name FROM Songs
 JOIN Albums ON Albums.id = Songs.album_id;
 SELECT '';
-
-/*
- * TODO: Find all albums published between 1970 and 1980.
- */
+ 
+SELECT Songs.name, Albums.name FROM Songs
+JOIN Albums ON Albums.id = Songs.album_id
+WHERE Albums.year_published < 2000;
+SELECT '';
 
 /*
  * TODO: Find all songs on albums published between 1970 and 1980. 
