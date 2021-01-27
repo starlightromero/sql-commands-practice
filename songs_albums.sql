@@ -1,9 +1,9 @@
- CREATE TABLE Songs (
+CREATE TABLE Songs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(70) NOT NULL,
     album_id INTEGER NOT NULL,
     FOREIGN KEY (album_id) REFERENCES Albums(id)
- )
+ );
 
 CREATE TABLE Albums (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -12,9 +12,15 @@ CREATE TABLE Albums (
     year_published INTEGER NOT NULL
 );
 
-/* 
- * TODO: Insert at least 4 rows of data into the songs table. You can change up the albums as well. :)
- */
+
+INSERT INTO Songs
+    (name)
+VALUES
+    ('In Too Deep')
+    ('Good Riddance (Time of Your Life)')
+    ('My Generation')
+    ('Santeria')
+;
  
 INSERT INTO Albums
     (name, artist, year_published)
