@@ -20,7 +20,10 @@ VALUES
     ('My Generation', 3),
     ('Santeria', 4),
     ('My Way', 3),
-    ('What I Got', 4)
+    ('What I Got', 4),
+    ('Scar Tissue', 5),
+    ('Otherside', 5),
+    ('Californication', 5)
 ;
  
 INSERT INTO Albums
@@ -30,7 +33,7 @@ VALUES
     ('Nimrod', 'Green Day', 1997),
     ('Chocolate Starfish and the Hot Dog Flavored Water', 'Limp Bizkit', 2000),
     ('Sublime', 'Sublime', 1997),
-    ('California', 'Blink-182', 2016)
+    ('Californication', 'Red Hot Chili Peppers', 1999)
 ;
 
 
@@ -55,6 +58,7 @@ JOIN Albums ON Albums.id = Songs.album_id
 WHERE Albums.year_published < 2000;
 SELECT '';
  
-/*
- * TODO: Find all songs on albums with names containing 'California'.
- */
+SELECT Songs.name FROM Songs
+JOIN Albums ON Albums.id = Songs.album_id
+WHERE Songs.name LIKE '%Cali%';
+SELECT '';
