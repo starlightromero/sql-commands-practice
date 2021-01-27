@@ -18,7 +18,9 @@ VALUES
     ('In Too Deep', 1),
     ('Good Riddance (Time of Your Life)', 2),
     ('My Generation', 3),
-    ('Santeria', 4)
+    ('Santeria', 4),
+    ('My Way', 3),
+    ('What I Got', 4)
 ;
  
 INSERT INTO Albums
@@ -44,15 +46,14 @@ SELECT Songs.name, Albums.name FROM Songs
 JOIN Albums ON Albums.id = Songs.album_id;
 SELECT '';
  
-SELECT Songs.name, Albums.name FROM Songs
+SELECT Albums.name FROM Albums
+WHERE Albums.year_published < 2000;
+SELECT '';
+ 
+SELECT Songs.name FROM Songs
 JOIN Albums ON Albums.id = Songs.album_id
 WHERE Albums.year_published < 2000;
 SELECT '';
-
-/*
- * TODO: Find all songs on albums published between 1970 and 1980. 
- *(Hint: Use a table join.)
- */
  
 /*
  * TODO: Find all songs on albums with names containing 'California'.
