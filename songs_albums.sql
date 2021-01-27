@@ -12,30 +12,29 @@ CREATE TABLE Albums (
     year_published INTEGER NOT NULL
 );
 
-
 INSERT INTO Songs
-    (name)
+    (name, album_id)
 VALUES
-    ('In Too Deep')
-    ('Good Riddance (Time of Your Life)')
-    ('My Generation')
-    ('Santeria')
+    ('In Too Deep', 1),
+    ('Good Riddance (Time of Your Life)', 2),
+    ('My Generation', 3),
+    ('Santeria', 4)
 ;
  
 INSERT INTO Albums
     (name, artist, year_published)
 VALUES
-    ('The Dark Side of the Moon', 'Pink Floyd', 1973),
-    ('Abbey Road', 'The Beatles', 1969),
-    ('Hotel California', 'Eagles', 1976),
-    ('Born in the U.S.A.', 'Bruce Springsteen', 1984),
+    ('All Killer No Filler', 'Sum41', 2001),
+    ('Nimrod', 'Green Day', 1997),
+    ('Chocolate Starfish and the Hot Dog Flavored Water', 'Limp Bizkit', 2000),
+    ('Sublime', 'Sublime', 1997),
     ('California', 'Blink-182', 2016)
 ;
 
 
 /* Queries */
 
--- SELECT * FROM Songs;
+SELECT * FROM Songs;
 
 SELECT * FROM Albums;
 
